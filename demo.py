@@ -108,11 +108,44 @@ print(class_23)
 print()
 
 # NOT NA (JENNY START HERE)
+print("pandas also makes it easy for us to isolate the missing values from our data. For instance, we can use isna() to find all the entries with a missing Cabin value: \n")
+print("cabin_unknown = titanic[titanic[\"Cabin\"].isna()]")
+cabin_unknown = titanic[titanic["Cabin"].isna()]
+print(cabin_unknown)
+print()
 
 # USING LOC() FUNCTION
+print("What ifwe only wanted to see the names of the people whose ages are unknown? We can do that using the loc() function: \n")
+print("titanic.loc[titanic[\"Age\"].isna(), \"Name\"]")
+print(titanic.loc[titanic['Age'].isna(), 'Name'])
+print()
 
 # SUMMARY STATISTICS USING DESCRIBE()
+print("Now if we just want to focus on the ages of the people, we can use describe() to manipulate the numbers:")
+print("titanic[\"Age\"].describe()")
+print(titanic['Age'].describe())
 
 # CONCAT DATA
+print("To add up the values of two tables into the same column, we can use concat():")
+print("s1 = pd.Series(['a', 'b'])")
+s1 = pd.Series(['a', 'b'])
+print(s1)
+print("s2 = pd.Series(['c', 'd'])")
+s2 = pd.Series(['c', 'd'])
+print(s2)
+print("s3 = pd.concat([s1, s2])")
+s3 = pd.concat([s1, s2])
+print(s3)
+print()
 
 # MERGING DATA
+print("To combine the columns of two tables, we can use merge() to merge one table to the left of the other: ")
+print("df1 = pd.DataFrame({'lkey': ['foo', 'bar', 'baz', 'foo'], 'value': [1, 2, 3, 5]})")
+df1 = pd.DataFrame({'lkey': ['foo', 'bar', 'baz', 'foo'], 'value': [1, 2, 3, 5]})
+print(df1)
+print("df2 = pd.DataFrame({'rkey': ['foo', 'bar', 'baz', 'foo'], 'value': [5, 6, 7, 8]})")
+df2 = pd.DataFrame({'rkey': ['foo', 'bar', 'baz', 'foo'], 'value': [5, 6, 7, 8]})
+print(df2)
+print("df3 = df1.merge(df2, left_on='lkey', right_on='rkey')")
+df3 = df1.merge(df2, left_on='lkey', right_on='rkey')
+print(df3)
