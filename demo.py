@@ -24,6 +24,8 @@ titanic = pd.read_csv("titanic.csv")
 print(titanic)
 print()
 
+print("Press enter to continue.")
+user = input()
 # INFO() FUNCTION (JACKIE START HERE)
 print("Question 2: Which of the following functions is used to display technical information about the data?")
 print("(a) data")
@@ -42,6 +44,8 @@ print("titanic.info()\n")
 print(titanic.info())
 print()
 
+print("Press enter to continue.")
+user = input()
 # LOOKING INTO INDIVIDUAL DATAFRAMES
 print("Notice the first line printed out by the info() function. It identifies our data as being stored in a DataFrame (df) object.")
 print("Let's look a little closer into what these objects are.\n")
@@ -58,6 +62,8 @@ print()
 print("As you can see, a DataFrame is roughly the equivalent of a table in SQLite. There are labeled columns, with each row denoting a new entry.")
 print()
 
+print("Press enter to continue.")
+user = input()
 # HEAD AND TAIL READING
 print("Now we are going to take a look into some methods for rummaging through DataFrames.\n")
 print("Question 3: Which of the following functions is used to display the first n entries of a df?")
@@ -77,6 +83,8 @@ print()
 print(titanic.head(8))
 print()
 
+print("Press enter to continue.")
+user = input()
 # DTYPES
 print("Many different types of data can be stored in a df. We can look at what type of data is stored in each Series (column) using the dtypes attribute of a df.\n")
 print("titanic.dtypes")
@@ -86,6 +94,8 @@ print()
 print("As you can see, some of the data stored in our titanic dataset include integers and floating points among others. ")
 print()
 
+print("Press enter to continue.")
+user = input()
 # AGE_SEX
 print("Next, we are going to examine selecting specific columns in pandas. We can do so using bracket [] notation. For example:\n")
 print("age_sex = titanic[[\"Age\", \"Sex\"]]\n")
@@ -93,6 +103,8 @@ age_sex = titanic[["Age", "Sex"]]
 print(age_sex)
 print()
 
+print("Press enter to continue.")
+user = input()
 # ABOVE 35
 print("Inside the brackets, we can also include conditionals. For example, if we wanted to select for ages above 35: \n")
 print("above_35 = titanic[titanic[\"Age\"] > 35]")
@@ -100,6 +112,8 @@ above_35 = titanic[titanic["Age"] > 35]
 print(above_35)
 print()
 
+print("Press enter to continue.")
+user = input()
 # PCLASS 2, 3
 print("Here is another example of placing conditions on our queries, using the isin() function to select for passengers in PClass 2 and 3: \n")
 print("class_23 = titanic[titanic[\"Pclass\"].isin([2, 3])]")
@@ -107,6 +121,8 @@ class_23 = titanic[titanic["Pclass"].isin([2, 3])]
 print(class_23)
 print()
 
+print("Press enter to continue.")
+user = input()
 # NOT NA (JENNY START HERE)
 print("pandas also makes it easy for us to isolate the missing values from our data. For instance, we can use isna() to find all the entries with a missing Cabin value: \n")
 print("cabin_unknown = titanic[titanic[\"Cabin\"].isna()]")
@@ -114,17 +130,23 @@ cabin_unknown = titanic[titanic["Cabin"].isna()]
 print(cabin_unknown)
 print()
 
+print("Press enter to continue.")
+user = input()
 # USING LOC() FUNCTION
 print("What if we only wanted to see the names of the people whose ages are unknown? We can do that using the loc() function: \n")
 print("titanic.loc[titanic[\"Age\"].isna(), \"Name\"]")
 print(titanic.loc[titanic['Age'].isna(), 'Name'])
 print()
 
+print("Press enter to continue.")
+user = input()
 # SUMMARY STATISTICS USING DESCRIBE()
 print("Now if we just want to focus on the ages of the people, we can use describe() to manipulate the numbers:")
 print("titanic[\"Age\"].describe()")
 print(titanic['Age'].describe())
 
+print("Press enter to continue.")
+user = input()
 # CONCAT DATA
 print("To add up the values of two tables into the same column, we can use concat():")
 print("s1 = pd.Series(['a', 'b'])")
@@ -138,6 +160,8 @@ s3 = pd.concat([s1, s2])
 print(s3)
 print()
 
+print("Press enter to continue.")
+user = input()
 # MERGING DATA
 print("To combine the columns of two tables, we can use merge() to merge one table to the left of the other: ")
 print("df1 = pd.DataFrame({'lkey': ['foo', 'bar', 'baz', 'foo'], 'value': [1, 2, 3, 5]})")
