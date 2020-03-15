@@ -23,8 +23,7 @@ titanic = pd.read_csv("titanic.csv")
 print(titanic)
 print()
 
-print("Each")
-# INFO() FUNCTION
+# INFO() FUNCTION (JACKIE START HERE)
 
 # LOOKING INTO INDIVIDUAL DATAFRAMES
 
@@ -38,10 +37,12 @@ print("Each")
 
 # PCLASS 2, 3
 
-# NOT NA
+# NOT NA (JENNY START HERE)
 
 # USING LOC() FUNCTION
 
 # SUMMARY STATISTICS USING DESCRIBE()
 
-# MERGING / CONCAT DATA
+# CONCAT DATA
+
+# MERGING DATA
