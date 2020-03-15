@@ -115,7 +115,7 @@ print(cabin_unknown)
 print()
 
 # USING LOC() FUNCTION
-print("What ifwe only wanted to see the names of the people whose ages are unknown? We can do that using the loc() function: \n")
+print("What if we only wanted to see the names of the people whose ages are unknown? We can do that using the loc() function: \n")
 print("titanic.loc[titanic[\"Age\"].isna(), \"Name\"]")
 print(titanic.loc[titanic['Age'].isna(), 'Name'])
 print()
